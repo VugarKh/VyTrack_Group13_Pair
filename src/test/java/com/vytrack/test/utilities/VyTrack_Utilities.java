@@ -13,8 +13,8 @@ public class VyTrack_Utilities {
         WebElement userName = driver.findElement(By.id("prependedInput"));
         userName.sendKeys(username);
 
-        WebElement passwordBox = driver.findElement(By.id("prependedInput2"));
-        passwordBox.sendKeys(password);
+        WebElement passWord = driver.findElement(By.id("prependedInput2"));
+        passWord.sendKeys(password);
 
         WebElement loginBtn = driver.findElement(By.id("_submit"));
         loginBtn.click();
