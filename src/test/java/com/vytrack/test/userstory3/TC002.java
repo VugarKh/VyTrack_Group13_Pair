@@ -33,23 +33,17 @@ public class TC002 extends TestBase {
         editBtn.click();
 
         WebElement odometerValue = driver.findElement(By.xpath("//input[@name='custom_entity_type[OdometerValue]']"));
-        //Thread.sleep(1000);
-        odometerValue.sendKeys("123123");
         odometerValue.clear();
         odometerValue.sendKeys("115599");
 
-       // Thread.sleep(2000);
         String actualOdometerValue = odometerValue.getAttribute("value");
         String expectedOdometerValue = "115599";
         Assert.assertEquals(actualOdometerValue,expectedOdometerValue,
                 "Expected odometer value [" + expectedOdometerValue + "] doesn't match with actual value [" + actualOdometerValue+
                         "]");
 
-
-
         WebElement saveAndCloseBtn = driver.findElement(By.xpath("(//button[@type='submit'])[1]"));
         saveAndCloseBtn.click();
-
 
         WebElement editMessage = driver.findElement(By.xpath("//div[@class='message']"));
         String actualEditMessage = editMessage.getText();
