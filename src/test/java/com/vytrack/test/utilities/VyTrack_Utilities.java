@@ -6,17 +6,17 @@ import org.openqa.selenium.WebElement;
 
 public class VyTrack_Utilities {
 
-    public static void vyTrackLogin(WebDriver driver, String username, String password) {
+    public static void vyTrackLogin() {
 
-        driver.get("https://qa2.vytrack.com/");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
 
-        WebElement userName = driver.findElement(By.id("prependedInput"));
-        userName.sendKeys(username);
+        WebElement userName = Driver.getDriver().findElement(By.id("prependedInput"));
+        userName.sendKeys(ConfigurationReader.getProperty("username"));
 
-        WebElement passWord = driver.findElement(By.id("prependedInput2"));
-        passWord.sendKeys(password);
+        WebElement passWord =Driver.getDriver().findElement(By.id("prependedInput2"));
+        passWord.sendKeys(ConfigurationReader.getProperty("password"));
 
-        WebElement loginBtn = driver.findElement(By.id("_submit"));
+        WebElement loginBtn = Driver.getDriver().findElement(By.id("_submit"));
         loginBtn.click();
     }
 }

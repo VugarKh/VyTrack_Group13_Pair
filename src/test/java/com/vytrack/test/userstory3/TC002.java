@@ -1,6 +1,5 @@
 package com.vytrack.test.userstory3;
 
-import com.vytrack.test.base.TestBase;
 import com.vytrack.test.utilities.ConfigurationReader;
 import com.vytrack.test.utilities.Driver;
 import com.vytrack.test.utilities.VyTrack_Utilities;
@@ -14,15 +13,13 @@ public class TC002 {
 
     @Test
     public void test001() throws InterruptedException {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-        VyTrack_Utilities.vyTrackLogin(Driver.getDriver(), "user37", "UserUser123");
-
+        VyTrack_Utilities.vyTrackLogin();
 
         WebElement fleetHeader = Driver.getDriver().findElement(By.xpath("//h1[@class='logo logo-text']"));
         String actualHeader = fleetHeader.getText();
         String expectedHeader = "FLEET MANAGEMENT";
 
-        //Assert.assertEquals(actualHeader, expectedHeader, "Failed!");
+        Assert.assertEquals(actualHeader, expectedHeader, "Failed!");
 
         WebElement fleetBtn = Driver.getDriver().findElement(By.xpath("(//a[@href='#']//span)[1]"));
         fleetBtn.click();
@@ -42,8 +39,8 @@ public class TC002 {
 
         String actualOdometerValue = odometerValue.getAttribute("value");
         String expectedOdometerValue = "115599";
-        Assert.assertEquals(actualOdometerValue,expectedOdometerValue,
-                "Expected odometer value [" + expectedOdometerValue + "] doesn't match with actual value [" + actualOdometerValue+
+        Assert.assertEquals(actualOdometerValue, expectedOdometerValue,
+                "Expected odometer value [" + expectedOdometerValue + "] doesn't match with actual value [" + actualOdometerValue +
                         "]");
 
         WebElement saveAndCloseBtn = Driver.getDriver().findElement(By.xpath("(//button[@type='submit'])[1]"));
