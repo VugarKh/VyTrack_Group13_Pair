@@ -1,15 +1,13 @@
 package com.vytrack.test.userstory3;
 
-import com.vytrack.test.utilities.ConfigurationReader;
 import com.vytrack.test.utilities.Driver;
 import com.vytrack.test.utilities.VyTrack_Utilities;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC002 {
+public class B26G13_22 {
 
     @Test
     public void test001() throws InterruptedException {
