@@ -1,6 +1,5 @@
 package com.vytrack.test.userstory3;
 
-import com.vytrack.test.utilities.ConfigurationReader;
 import com.vytrack.test.utilities.Driver;
 import com.vytrack.test.utilities.VyTrack_Utilities;
 import org.openqa.selenium.By;
@@ -9,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC003 {
+public class B26G13_16 {
 
     @Test
 
