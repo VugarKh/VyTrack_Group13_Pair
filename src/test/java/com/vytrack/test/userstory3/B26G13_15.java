@@ -29,6 +29,15 @@ public class B26G13_15 {
         WebElement vehicleOdometer = Driver.getDriver().findElement(By.xpath("(//span[@class='title title-level-2'])[2]"));
         vehicleOdometer.click();
 
+        Thread.sleep(2000);
+        WebElement vehicleOdometerTitle = Driver.getDriver().findElement(By.xpath("//h1[@class='oro-subtitle']"));
+
+
+        String actualResult = vehicleOdometerTitle.getText();
+        String expectedResult = "Vehicles Odometers";
+
+        Assert.assertEquals(actualResult, expectedResult, "Failed!");
+
         Thread.sleep(1000);
         WebElement filter = Driver.getDriver().findElement(By.xpath("//i[@class='fa-filter hide-text']"));
         filter.click();
