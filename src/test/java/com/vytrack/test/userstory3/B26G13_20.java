@@ -31,25 +31,26 @@ public class B26G13_20 {
 
         Assert.assertEquals(actualFleetMngBtn, expectedFleetMngBtn, "Failed!");
 
+       // 6. Hover over to Fleet feature and click
         WebElement fleetBtn = Driver.getDriver().findElement(By.xpath("(//a[@href='#']//span)[1]"));
         fleetBtn.click();
 
-        // 6. Hover over Fleet model, "Vehicle Odometer" feature should be displayed
+        // 7. Hover over Fleet model, "Vehicle Odometer" feature should be displayed
         WebElement vehicleOdometer = Driver.getDriver().findElement(By.xpath("(//span[@class='title title-level-2'])[2]"));
-        vehicleOdometer.click();
 
-
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+        WebElement vehicleOdometerTitle = Driver.getDriver().findElement(By.xpath("//h1[@class='oro-subtitle']"));
         String actualResult = vehicleOdometer.getText();
         String expectedResult = "Vehicle Odometer";
-        //Assert.assertEquals(actualResult, expectedResult, "Failed!");
-        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, expectedResult, "Failed!");
+       // System.out.println(actualResult);
 
-        // 7. Click on "Vehicle Odometer" feature
+        // 8. Click on "Vehicle Odometer" feature
+        vehicleOdometer.click();
         System.out.println("vehicleOdometer.isSelected() = " + vehicleOdometer.isSelected());
 
 
-        // 8. User is redirected to the Vehicles Odometer page, "Vehicles Odometer" is displayed
+        // 9. User is redirected to the Vehicles Odometer page, "Vehicles Odometers" is displayed
         WebElement vehicleOdometerHeader = Driver.getDriver().findElement(By.xpath("//h1[.='Vehicles Odometers']"));
 
         String actualVehicleOdometer = vehicleOdometerHeader.getText();
