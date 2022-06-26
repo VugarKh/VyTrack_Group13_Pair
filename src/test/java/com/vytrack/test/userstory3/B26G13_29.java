@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCase02 {
+public class B26G13_29 {
 
     @Test
     public void cancelVehicleOdometer() throws InterruptedException {
