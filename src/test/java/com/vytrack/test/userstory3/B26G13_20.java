@@ -1,7 +1,8 @@
 package com.vytrack.test.userstory3;
 
-import com.vytrack.test.Utilities.Driver;
-import com.vytrack.test.Utilities.VyTrack_Utilities;
+import com.vytrack.test.utilities.Driver;
+import com.vytrack.test.utilities.VyTrack_Utilities;
+import com.vytrack.test.utilities.VyTrack_Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
